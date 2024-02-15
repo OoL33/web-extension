@@ -2,9 +2,9 @@ import React, { useState, ChangeEvent, FormEvent } from "react"
 
 function FormComponent() {
   const [formData, setFormData] = useState({
-    fieldOne: "",
-    fieldTwo: "",
-    fieldThree: "",
+    walletPath: "",
+    creatorAlias: "",
+    contentPath: "",
   })
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -30,51 +30,51 @@ function FormComponent() {
         <div className="mb-4">
           <label
             className="block text-gray-700 text-sm font-bold mb-2"
-            htmlFor="fieldOne"
+            htmlFor="walletPath"
           >
-            Field One
+            Wallet Path (.json)
           </label>
           <input
             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            id="fieldOne"
+            id="walletPath"
             type="text"
-            placeholder="Field One"
-            name="fieldOne"
-            value={formData.fieldOne}
+            placeholder="Enter path to wallet location"
+            name="walletPath"
+            value={formData.walletPath}
             onChange={handleChange}
           />
         </div>
         <div className="mb-4">
           <label
             className="block text-gray-700 text-sm font-bold mb-2"
-            htmlFor="fieldTwo"
+            htmlFor="creatorAlias"
           >
-            Field Two
+            Creator Alias / User Name
           </label>
           <input
             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            id="fieldTwo"
+            id="creatorAlias"
             type="text"
-            placeholder="Field Two"
-            name="fieldTwo"
-            value={formData.fieldTwo}
+            placeholder="Enter creator alias or user name"
+            name="creatorAlias"
+            value={formData.creatorAlias}
             onChange={handleChange}
           />
         </div>
         <div className="mb-6">
           <label
             className="block text-gray-700 text-sm font-bold mb-2"
-            htmlFor="fieldThree"
+            htmlFor="contentPath"
           >
-            Field Three
+            Content Path (.png, .jpg, etc)
           </label>
           <input
             className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            id="fieldThree"
+            id="contentPath"
             type="text"
-            placeholder="Field Three"
-            name="fieldThree"
-            value={formData.fieldThree}
+            placeholder="Enter path to content"
+            name="contentPath"
+            value={formData.contentPath}
             onChange={handleChange}
           />
         </div>
